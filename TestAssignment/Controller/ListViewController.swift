@@ -74,6 +74,7 @@ extension ListViewController: UITableViewDataSource,UITableViewDelegate{
       let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
      
      let MVM = arrListVM[indexPath.row]
+     cell.selectionStyle = .none
      cell.titleLabel.text = MVM.title
      cell.subTitleLabel.text = MVM.description1
             if URL(string:MVM.imageHref ?? "") == nil{
